@@ -14,10 +14,20 @@ var charDisability = ["missing left leg",
 "lost use of both legs",
 "has no short term memory"];
 
+// all of these must be able to follow "You are a " in a sentence
+var charRace = ["orc", 
+    "human", 
+    "moutian dwarf",
+    "teifling", 
+    "wood elf", 
+    "high elf", 
+    "dark elf", 
+    "hill dwarf",
+    "Dragonborn"];
 
 
 document.getElementById("genChar").onclick = function() {generateCharacter()};
 
 function generateCharacter() {
-    alert("You are someone who "+ charDisability[Math.floor(Math.random()* charDisability.length)]);
+    alert("You are a " +charRace[Math.floor(Math.random() * charRace.length)]+ " who "+ charDisability[Math.floor(Math.random()* charDisability.length)]);
 }
